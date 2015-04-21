@@ -3,7 +3,6 @@
 #include <cmath>
 #include <vector>
 using namespace std;
-class Math;
 class Math
 {
 public:
@@ -16,7 +15,7 @@ public:
 	double Minus(initializer_list<double> e);
 	//Math
 	void Restart();
-	Math Append(initializer_list<double> e);
+	void Append(initializer_list<double> e);
 	Math(initializer_list<double> e);
 	Math(vector<double> e);
 	Math() {}
@@ -44,7 +43,7 @@ ostream& operator<< (ostream& out, Math &v)
 }
 double Math::add_Array(double e[])
 {
-	double a;
+	double a=0;
 	for (int i = 0; i != sizeof(e); i++) {
 		a += e[i];
 	}
@@ -52,7 +51,7 @@ double Math::add_Array(double e[])
 }
 double Math::minus_Array(double e[])
 {
-	double a;
+	double a=0;
 	for (int i = 0; i != sizeof(e); i++) {
 		a -= e[i];
 	}
@@ -80,7 +79,7 @@ void Math::Restart()
 {
 	_x.clear();
 }
-Math Math::Append(initializer_list<double> e)
+void Math::Append(initializer_list<double> e)
 {
 	initializer_list<double>::iterator it;
 	for (it = e.begin(); it != e.end(); ++it) {
