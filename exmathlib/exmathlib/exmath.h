@@ -2,6 +2,7 @@
 #define INCLPROT
 #include <cmath>
 #include <vector>
+#include "exfrac.h"
 using namespace std;
 class Math
 {
@@ -12,6 +13,7 @@ public:
 	double add_Array(double e[]);
 	double minus_Array(double e[]);
 	double Add(initializer_list<double> e);
+	Fraction Add(Fraction a, Fraction b);
 	double Minus(initializer_list<double> e);
 	//Math
 	void Restart();
@@ -40,6 +42,13 @@ ostream& operator<< (ostream& out, Math &v)
 		p--;
 	}
 	return out;
+}
+Fraction Math::Add(Fraction a, Fraction b)
+{
+	Fraction c(0, 0);
+	c.numerator = a.numerator + b.numerator;
+	c.denominator = a.denominator + b.numerator;
+	return c;
 }
 double Math::add_Array(double e[])
 {
