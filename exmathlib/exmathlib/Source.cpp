@@ -1,5 +1,6 @@
 #include <iostream>
 #include "exmath.h"
+#include "exfrac.h"
 using namespace std;
 int main()
 {
