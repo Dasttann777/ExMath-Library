@@ -4,6 +4,7 @@
 #include <vector>
 #include "exfrac.h"
 using namespace std;
+Fraction square(Fraction e);
 class Math
 {
 public:
@@ -172,6 +173,12 @@ vector<double> sqrt_all(vector<double> e)
 double square(double e)
 {
 	return e*e;
+}
+Fraction square(Fraction e)
+{
+	e.numerator *= e.numerator;
+	e.denominator *= e.denominator;
+	return e;
 }
 vector<double> square_all(vector<double> e)
 {

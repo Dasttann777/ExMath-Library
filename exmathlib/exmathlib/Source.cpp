@@ -4,6 +4,6 @@ using namespace std;
 int main()
 {
 	Fraction f(1, 2);
-	cout << f;
+	cout << square(f).ConvertToDouble();
 	cin.get();
 }
