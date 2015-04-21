@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "exmathlib", "exmathlib\exmathlib.vcxproj", "{C6E31246-5839-42F0-BADA-6FCE5A0EC68B}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs32
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = exmathlib\\exmathlib.vcxproj
+		SccProjectName1 = exmathlib
+		SccLocalPath1 = exmathlib
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C6E31246-5839-42F0-BADA-6FCE5A0EC68B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C6E31246-5839-42F0-BADA-6FCE5A0EC68B}.Debug|Win32.Build.0 = Debug|Win32
+		{C6E31246-5839-42F0-BADA-6FCE5A0EC68B}.Release|Win32.ActiveCfg = Release|Win32
+		{C6E31246-5839-42F0-BADA-6FCE5A0EC68B}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
