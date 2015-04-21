@@ -8,7 +8,7 @@ public:
 };
 Fraction Fraction::Add(Fraction a, Fraction b)
 {
-	Fraction c;
+	Fraction c(0,0);
 	c.numerator = a.numerator + b.numerator;
 	c.denominator = a.denominator + b.numerator;
 	return c;
