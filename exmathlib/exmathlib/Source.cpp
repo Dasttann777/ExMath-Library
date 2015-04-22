@@ -3,7 +3,8 @@
 using namespace std;
 int main()
 {
-	Fraction f(1, 2);
-	cout << square(f).ConvertToDouble();
+	Fraction p(40, 80);
+	p.Simplify(4);
+	cout << p;
 	cin.get();
 }

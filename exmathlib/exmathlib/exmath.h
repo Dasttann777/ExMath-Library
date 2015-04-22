@@ -4,18 +4,27 @@
 #include <vector>
 #include "exfrac.h"
 using namespace std;
-Fraction square(Fraction e);
+Fraction square(Fraction);
+vector<double> sqrt_all(vector<double>);
+double cubert(double);
+double xroot(double, double);
+int RoundToINT(double e) { return (int)(e + 0.5); }
 class Math
 {
 public:
+	friend class Fraction;
 	vector<double> _x;
 	friend ostream& operator<< (ostream& out, Math &v);
-	//Add/Subtract
-	double add_Array(double e[]);
-	double minus_Array(double e[]);
-	double Add(initializer_list<double> e);
-	Fraction Add(Fraction a, Fraction b);
-	double Minus(initializer_list<double> e);
+	//Trigonometry
+	double hypotenuse(double, double);
+	//Add/Subtract/Multiply/Divide
+	//->
+	double Multiply(initializer_list<double>);
+	double add_Array(double[]);
+	double minus_Array(double[]);
+	double Add(initializer_list<double>);
+	Fraction Add(Fraction, Fraction);
+	double Minus(initializer_list<double>);
 	//Math
 	void Restart();
 	void Append(initializer_list<double> e);
@@ -30,6 +39,20 @@ public:
 	vector<double> diff(double, double, double);
 	vector<double> diff(double, double, double, double);
 };
+double Math::hypotenuse(double l, double w)
+{
+	double temp = sqrt((l*l) + (w*w));
+	return temp;
+}
+double Multiply(initializer_list<double> e)
+{
+	double a = 1;
+	initializer_list<double>::iterator it;
+	for (it = e.begin(); it != e.end(); ++it) {
+		a *= *it;
+	}
+	return a;
+}
 ostream& operator<< (ostream& out, Math &v)
 {
 	out << "y=";
@@ -47,13 +70,20 @@ ostream& operator<< (ostream& out, Math &v)
 Fraction Math::Add(Fraction a, Fraction b)
 {
 	Fraction c(0, 0);
+	a.Simplify();
+	b.Simplify();
+	a.numerator *= b.denominator;
+	a.denominator *= b.denominator;
+	b.numerator *= a.denominator;
+	b.denominator *= a.denominator;
 	c.numerator = a.numerator + b.numerator;
-	c.denominator = a.denominator + b.numerator;
+	c.denominator = a.denominator;
+	c.Simplify();
 	return c;
 }
 double Math::add_Array(double e[])
 {
-	double a=0;
+	double a = 0;
 	for (int i = 0; i != sizeof(e); i++) {
 		a += e[i];
 	}
@@ -61,7 +91,7 @@ double Math::add_Array(double e[])
 }
 double Math::minus_Array(double e[])
 {
-	double a=0;
+	double a = 0;
 	for (int i = 0; i != sizeof(e); i++) {
 		a -= e[i];
 	}
@@ -187,5 +217,13 @@ vector<double> square_all(vector<double> e)
 		(*i) *= (*i);
 	}
 	return e;
+}
+double cubert(double e)
+{
+	return pow(e, 1 / 3.);
+}
+double xroot(double e, double n)
+{
+	return pow(e, 1 / n);
 }
 #endif
