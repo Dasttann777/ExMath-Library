@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <vector>
 class Math;
@@ -8,7 +9,7 @@ class Fraction
 public:
 	double numerator;
 	double denominator;
-	vector<Fraction> _f;
+	std::vector<Fraction> _f;
 
 	Fraction Simplify();
 	Fraction Simplify(Fraction&);
@@ -33,7 +34,7 @@ Fraction Fraction::Simplify(int e)
 {
 	Fraction f(0, 0);
 	for (e; e != 0; e--) {
-		int t, b;
+		int t = 0, b = 0;
 		for (int i = RoundToINT(this->denominator) * RoundToINT(this->numerator); i > 1; i--) {
 			if ((RoundToINT(this->denominator) % i == 0) && (RoundToINT(this->numerator) % i == 0)) {
 				b = RoundToINT(this->denominator) / i;
@@ -51,7 +52,7 @@ Fraction Fraction::Simplify()
 {
 	Fraction f(0, 0);
 	for (int l = 3; l != 0; l--) {
-		int t, b;
+		int t = 0, b = 0;
 		for (int i = RoundToINT(this->denominator) * RoundToINT(this->numerator); i > 1; i--) {
 			if ((RoundToINT(this->denominator) % i == 0) && (RoundToINT(this->numerator) % i == 0)) {
 				b = RoundToINT(this->denominator) / i;
@@ -77,7 +78,6 @@ Fraction Fraction::Simplify(Fraction &a)
 		}
 		a.denominator = b;
 		a.numerator = t;
-
 	}
 	return a;
 }
@@ -93,7 +93,6 @@ Fraction Fraction::Simplify(Fraction &a, int l)
 		}
 		a.denominator = b;
 		a.numerator = t;
-
 	}
 	return a;
 }

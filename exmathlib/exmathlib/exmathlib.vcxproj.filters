@@ -18,12 +18,18 @@
     <ClCompile Include="Source.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="exmath.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="exmath.h">
+    <ClInclude Include="exfrac.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="exfrac.h">
+    <ClInclude Include="exmath1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exmath.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
