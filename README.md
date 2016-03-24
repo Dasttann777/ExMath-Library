@@ -13,4 +13,3 @@ Planned:
 * Fractions
 * Extended Calculus
 * Trigonometry
-This is just something I am working on during my free tine at Uni, feel free to contribute and provide criticism.
