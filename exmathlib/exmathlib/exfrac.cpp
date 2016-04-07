@@ -81,10 +81,9 @@ Fraction Fraction::Multiply(Fraction a)
 }
 Fraction Fraction::Subtract(Fraction a)
 {
-	Fraction v(a.numerator, 0);
-	v.numerator -= this->numerator;
-	v.denominator = this->denominator;
-	return v;
+	Fraction *v = new Fraction((this->numerator * a.denominator) - (a.numerator * this->denominator),
+		this->denominator * a.denominator);
+	return *v;
 }
 Fraction Fraction::Add(Fraction a)
 {
@@ -110,6 +109,11 @@ Fraction::Fraction(double n, double d)
 {
 	numerator = n;
 	denominator = d;
+}
+Fraction::Fraction()
+{
+	numerator = 1;
+	denominator = 1;
 }
 ostream &operator<< (ostream& fout, Fraction &a)
 {
