@@ -46,6 +46,7 @@ Fraction Fraction::Simplify(Fraction &a)
 			}
 		}
 		a.denominator = b;
+#pragma warning(suppress: 6001)
 		a.numerator = t;
 	}
 	return a;
