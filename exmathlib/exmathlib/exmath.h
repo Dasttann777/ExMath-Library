@@ -1,5 +1,4 @@
 #pragma once
-#define _USE_MATH_DEFINES
 #include <vector>
 #include <iostream>
 #include "exfrac.h"
