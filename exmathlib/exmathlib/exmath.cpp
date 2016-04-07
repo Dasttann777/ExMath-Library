@@ -2,8 +2,7 @@
 int RoundToINT(double e) { return (int)(e + 0.5); }
 double Math::hypotenuse(double l, double w)
 {
-	double temp = sqrt((l*l) + (w*w));
-	return temp;
+	return sqrt((l*l) + (w*w));
 }
 double Multiply(std::initializer_list<double> e)
 {
@@ -14,7 +13,6 @@ double Multiply(std::initializer_list<double> e)
 	}
 	return a;
 }
-
 double Math::add_Array(double e[])
 {
 	double a = 0;
@@ -37,6 +35,14 @@ double Math::Add(std::initializer_list<double> e)
 	std::initializer_list<double>::iterator it;
 	for (it = e.begin(); it != e.end(); ++it) {
 		a += *it;
+	}
+	return a;
+}
+Fraction Math::Add(std::initializer_list<Fraction> e) {
+	Fraction a(0, 0);
+	std::initializer_list<Fraction>::iterator it;
+	for (it = e.begin(); it != e.end(); ++it) {
+		a = a.Add(*it);
 	}
 	return a;
 }

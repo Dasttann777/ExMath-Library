@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
 #include <iostream>
-
+#include "exfrac.h"
 class Math
 {
 public:
@@ -15,7 +15,8 @@ public:
 	double add_Array(double[]);
 	double minus_Array(double[]);
 	double Add(std::initializer_list<double>);
-	Fraction Add(Fraction, Fraction);
+	Fraction Add(std::initializer_list <Fraction>);
+	Fraction Add(Fraction fx, Fraction fy);
 	double Minus(std::initializer_list<double>);
 	//Math
 	void Restart();
@@ -23,7 +24,6 @@ public:
 	Math(std::initializer_list<double> e);
 	Math(std::vector<double> e);
 	Math() {}
-	Math& operator+= (Math &obj);
 	//Calculus
 	std::vector<double> anti_diff(std::vector<double>);
 	double diff(double, double);
@@ -32,7 +32,6 @@ public:
 	std::vector<double> diff(double, double, double, double);
 };
 
-std::ostream& operator<< (std::ostream& out, Math &v);
 
 std::vector<double> sqrt_all(std::vector<double>);
 double cubert(double);
