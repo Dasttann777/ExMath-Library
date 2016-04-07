@@ -1,9 +1,8 @@
 #pragma once
 #include <iostream>
 #include <vector>
-class Math;
+#include "exdefines.h"
 int RoundToINT(double);
-using namespace std;
 class Fraction
 {
 public:
@@ -16,9 +15,9 @@ public:
 	Fraction Simplify(int);
 	Fraction Simplify(Fraction&, int);
 
-	double ConvertToDouble();
-	double ConvertToDouble(Fraction);
-
+	double toDouble();
+	double toDouble(Fraction);
+	operator double() { return (this->numerator / this->denominator); }
 	//Basic Arithmetic
 	Fraction Divide(Fraction);
 	Fraction Multiply(Fraction);
@@ -28,5 +27,5 @@ public:
 
 	Fraction(double, double);
 	Fraction();
-	friend ostream &operator<< (ostream&, Fraction&);
+	friend std::ostream &operator<< (std::ostream&, Fraction&);
 };

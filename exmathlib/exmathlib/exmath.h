@@ -2,19 +2,21 @@
 #include <vector>
 #include <iostream>
 #include "exfrac.h"
+#include "extrig.h"
+#include "exdefines.h"
 class Math
 {
 public:
 	friend class Fraction;
-	std::vector<double> _x;
-	//Trigonometry
-	double hypotenuse(double, double);
+	friend class Trig;
+	std::vector<double> _x;	
 	//Add/Subtract/Multiply/Divide
 	//->
-	double Multiply(std::initializer_list<double>);
+	double Multiply(std::initializer_list<double> e);
 	double add_Array(double[]);
 	double minus_Array(double[]);
 	double Add(std::initializer_list<double>);
+	double Add(double _1, double _2) { return _1 + _2; }
 	Fraction Add(std::initializer_list <Fraction>);
 	Fraction Add(Fraction fx, Fraction fy);
 	double Minus(std::initializer_list<double>);

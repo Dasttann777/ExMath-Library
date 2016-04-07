@@ -97,25 +97,25 @@ Fraction Fraction::Add(Fraction a, Fraction b)
 	v.numerator = a.numerator + b.numerator;
 	return v;
 }
-double Fraction::ConvertToDouble()
+double Fraction::toDouble()
 {
 	return (this->numerator) / (this->denominator);
 }
-double Fraction::ConvertToDouble(Fraction e)
+double Fraction::toDouble(Fraction e)
 {
 	return e.numerator / e.denominator;
 }
 Fraction::Fraction(double n, double d)
-{
-	numerator = n;
-	denominator = d;
+{	
+		numerator = n;
+		denominator = d;
 }
 Fraction::Fraction()
 {
 	numerator = 1;
 	denominator = 1;
 }
-ostream &operator<< (ostream& fout, Fraction &a)
+std::ostream &operator<< (std::ostream& fout, Fraction &a)
 {
 	fout << a.numerator << "/" << a.denominator;
 	return fout;

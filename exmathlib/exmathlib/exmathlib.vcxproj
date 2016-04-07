@@ -73,11 +73,14 @@
   <ItemGroup>
     <ClCompile Include="exfrac.cpp" />
     <ClCompile Include="exmath.cpp" />
+    <ClCompile Include="extrig.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="exdefines.h" />
     <ClInclude Include="exfrac.h" />
     <ClInclude Include="exmath.h" />
+    <ClInclude Include="extrig.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
