@@ -1,10 +1,8 @@
+#pragma once
 #include "exmath.h"
+#include "exfrac.h"
 int RoundToINT(double e) { return (int)(e + 0.5); }
-double Math::hypotenuse(double l, double w)
-{
-	return sqrt((l*l) + (w*w));
-}
-double Multiply(std::initializer_list<double> e)
+double Math::Multiply(std::initializer_list<double> e)
 {
 	double a = 1;
 	std::initializer_list<double>::iterator it;
@@ -45,6 +43,11 @@ Fraction Math::Add(std::initializer_list<Fraction> e) {
 		a = a.Add(*it);
 	}
 	return a;
+}
+Fraction Math::Add(Fraction fx, Fraction fy)
+{
+	fx = fx.Add(fy);
+	return fx;
 }
 double Math::Minus(std::initializer_list<double> e)
 {

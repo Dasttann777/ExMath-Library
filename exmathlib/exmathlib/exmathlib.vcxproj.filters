@@ -24,12 +24,21 @@
     <ClCompile Include="exfrac.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="extrig.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="exfrac.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="exmath.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="extrig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exdefines.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
