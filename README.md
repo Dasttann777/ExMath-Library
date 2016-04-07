@@ -9,8 +9,8 @@ Features:
 * Polynomial Equation Creation/Editing
 * Polynomial Equation Output
 * Array/Vector Manipulation for dynamic and fast manipulation of bulk values.
+* Fractions
 
 Planned:
-* Fractions
 * Extended Calculus
 * Trigonometry
