@@ -1,4 +1,5 @@
 #pragma once
+#define _USE_MATH_DEFINES
 #include <vector>
 #include <iostream>
 #include "exfrac.h"
@@ -33,8 +34,6 @@ public:
 	std::vector<double> diff(double, double, double);
 	std::vector<double> diff(double, double, double, double);
 };
-
-
 std::vector<double> sqrt_all(std::vector<double>);
 double cubert(double);
 double xroot(double, double);
