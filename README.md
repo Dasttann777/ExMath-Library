@@ -3,7 +3,7 @@ Basic C++ Math Libraries
 
 Basic C++ Math Libraries
 
-Features:
+**Features:**
 * Basic Differentiation
 * Basic Antidifferentiation(integration)
 * Polynomial Equation Creation/Editing
@@ -11,6 +11,8 @@ Features:
 * Array/Vector Manipulation for dynamic and fast manipulation of bulk values.
 * Fractions
 
-Planned:
-* Extended Calculus
+**In Development**
 * Trigonometry
+
+**Planned:**
+* Extended Calculus
