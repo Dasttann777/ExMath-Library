@@ -94,9 +94,19 @@ Fraction Fraction::Add(Fraction a)
 }
 Fraction Fraction::Add(Fraction a, Fraction b)
 {
-	Fraction v(0, 0);
-	v.numerator = a.numerator + b.numerator;
-	return v;
+	return a.Add(b);
+}
+Fraction Fraction::Divide(Fraction a, Fraction b)
+{
+	return a.Divide(b);
+}
+Fraction Fraction::Subtract(Fraction a, Fraction b)
+{
+	return a.Subtract(b);
+}
+Fraction Fraction::Multiply(Fraction a, Fraction b)
+{
+	return a.Multiply(b);
 }
 double Fraction::toDouble()
 {
@@ -107,9 +117,9 @@ double Fraction::toDouble(Fraction e)
 	return e.numerator / e.denominator;
 }
 Fraction::Fraction(double n, double d)
-{	
-		numerator = n;
-		denominator = d;
+{
+	numerator = n;
+	denominator = d;
 }
 Fraction::Fraction()
 {

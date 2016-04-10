@@ -163,3 +163,11 @@ double xroot(double e, double n)
 {
 	return pow(e, 1 / n);
 }
+Fraction cubert(Fraction a)
+{
+	return Fraction(cubert(a.numerator), cubert(a.denominator));
+}
+Fraction xroot(Fraction e, double n)
+{
+	return Fraction(xroot(e.numerator, n), xroot(e.denominator, n));
+}

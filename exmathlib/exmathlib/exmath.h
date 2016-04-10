@@ -9,14 +9,13 @@ class Math
 public:
 	friend class Fraction;
 	friend class Trig;
-	std::vector<double> _x;	
+	std::vector<double> _x;
 	//Add/Subtract/Multiply/Divide
 	//->
 	double Multiply(std::initializer_list<double> e);
 	double add_Array(double[]);
 	double minus_Array(double[]);
 	double Add(std::initializer_list<double>);
-	double Add(double _1, double _2) { return _1 + _2; }
 	Fraction Add(std::initializer_list <Fraction>);
 	Fraction Add(Fraction fx, Fraction fy);
 	double Minus(std::initializer_list<double>);
@@ -35,5 +34,7 @@ public:
 };
 std::vector<double> sqrt_all(std::vector<double>);
 double cubert(double);
+Fraction cubert(Fraction);
 double xroot(double, double);
+Fraction xroot(Fraction, double);
 int RoundToINT(double e);

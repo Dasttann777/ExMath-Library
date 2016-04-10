@@ -38,7 +38,7 @@ public:
 	static double toDouble(Fraction);
 	operator double() { return (this->numerator / this->denominator); }
 	//@}
-	
+
 	//! @name Arithmetic
 	//@{
 	/*!
@@ -52,7 +52,9 @@ public:
 	  cout << a.Multiply(b);
 	  cout << a.Divide(b);
 	  cout << Fraction::Add(a, b);
-	  //Other statics not implemented yet
+	  cout << Fraction::Divide(a, b);
+	  cout << Fraction::Multiply(a, b);
+	  cout << Fraction::Subtract(a, b);
 	  ~~~
 	*/
 	Fraction Divide(Fraction);
@@ -60,6 +62,9 @@ public:
 	Fraction Subtract(Fraction);
 	Fraction Add(Fraction);
 	static Fraction Add(Fraction, Fraction);
+	static Fraction Multiply(Fraction, Fraction);
+	static Fraction Subtract(Fraction, Fraction);
+	static Fraction Divide(Fraction, Fraction);
 	//@}
 	Fraction(double, double); //! Numerator and Denominator
 	Fraction();
